@@ -1,9 +1,15 @@
 # es-query-builder
 build elasticsearch queries the sane way
 
+# Install
+
+```
+npm install --save es-query-builder
+```
+
 # Motivation
 
-the elasticsearch json query syntax is painful
+the elasticsearch json query syntax pure pain
 
 
 # Setup
