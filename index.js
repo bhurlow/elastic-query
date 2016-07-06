@@ -3,17 +3,6 @@ var _ = require('lodash')
 var request = require('superagent')
 var assert = require('assert')
 
-// tools for building elasticsearch query maps
-// e.g:
-//
-//  var q = new Query;
-//
-//  q.size(12)
-//   .queryString('organization.id:19')
-//   .agg('terms', 'myagg', 'board.id')
-//   .make()
-//   
-
 module.exports = Query
 
 function Query(opts) {
@@ -89,8 +78,10 @@ Query.prototype.fetch = function(fn) {
 
   var ES_INDEX = process.env.ES_INDEX
   var ES_URL = process.env.ES_URL
+
   assert(ES_URL, 'must define ES_URL env var')
   assert(ES_INDEX, 'must define ES_INDEX env var')
+
   var suffix = '/_' + this.api
   var url = ES_URL + '/' + ES_INDEX + suffix
   var req = request.post(url).send(this.query)
