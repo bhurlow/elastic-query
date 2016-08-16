@@ -15,6 +15,11 @@ Query.prototype.size = function(size) {
   return this
 }
 
+Query.prototype.from = function(from) {
+  this.query.from = from
+  return this
+}
+
 Query.prototype.sort = function(field, order) {
   order = order || 'asc'
   this.query.sort = {}

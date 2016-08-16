@@ -1,6 +1,6 @@
 {
   "name": "elastic-query",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "build elasticsearch queries with self esteem",
   "main": "index.js",
   "scripts": {
