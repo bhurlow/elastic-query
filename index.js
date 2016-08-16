@@ -91,6 +91,8 @@ Query.prototype.fetch = function(fn) {
   var url = ES_URL + '/' + ES_INDEX + suffix
   var req = request.post(url).send(this.query)
 
+  req.timeout(1000 * 10)
+
   // if callback is supplied use it 
   if (fn) {
     return req.end(fn)
