@@ -1,5 +1,5 @@
 {
-  "name": "es-query-builder",
+  "name": "elastic-query",
   "version": "0.0.2",
   "description": "build elasticsearch queries with self esteem",
   "main": "index.js",
@@ -17,10 +17,7 @@
   ],
   "author": "Brian Hurlow",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bhurlow/es-query-builder/issues"
-  },
-  "homepage": "https://github.com/bhurlow/es-query-builder#readme",
+  "homepage": "https://github.com/bhurlow/elastic-query#readme",
   "dependencies": {
     "lodash": "^4.13.1",
     "superagent": "^2.0.0"

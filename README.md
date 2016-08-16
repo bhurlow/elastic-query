@@ -1,10 +1,12 @@
-# es-query-builder
+
+# elastic-query
+
 build elasticsearch queries the sane way
 
 # Install
 
 ```
-npm install --save es-query-builder
+npm install --save elastic-query
 ```
 
 # Motivation
@@ -14,7 +16,7 @@ the elasticsearch json query syntax pure pain
 
 # Setup
 
-`es-query-builder` expects both `ES_URL` and `ES_INDEX` environment variables to be definied 
+`elastic-query` expects both `ES_URL` and `ES_INDEX` environment variables to be definied 
 
 so you may have a config file that looks something like:
 
@@ -26,7 +28,7 @@ export ES_URL=https://mysearch:9200
 # Usage
 
 ```js
-var Query = require('es-query-builder')
+var Query = require('elastic-query')
 
 // create a fresh query:
 var q = new Query
