@@ -49,6 +49,7 @@ Query.prototype.range = function(field, start, end) {
 }
 
 Query.prototype.term = function(field, value) {
+  if (!this.query.filter) _.set(this.query, 'filter.bool', {})
   this.query.filter.bool.must = this.query.filter.bool.must || []
   var clause = { term: {} }
   clause.term[field] = value
