@@ -47,3 +47,9 @@ q.fetch(function(err, res) {
   // or with callback 
 })
 ```
+
+# Tests
+
+```
+npm test
+```

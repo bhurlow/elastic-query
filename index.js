@@ -57,7 +57,7 @@ Query.prototype.term = function(field, value) {
   return this
 }
 
-Query.prototype.agg = function(type, name, field) {
+Query.prototype.agg = function(type, name, field, interval) {
   this.query.aggs = this.query.aggs || {}
   var setStr = `aggs.${name}.${type}`
   _.set(this.query, setStr, {
@@ -70,7 +70,8 @@ Query.prototype.agg = function(type, name, field) {
   }
 
   if (type === 'date_histogram') {
-    _.set(this.query, setStr + '.interval', '1d')
+    interval = interval || '1d'
+    _.set(this.query, setStr + '.interval', interval)
   }
 
   return this
